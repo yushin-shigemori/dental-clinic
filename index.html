@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="style.css">
+    <title>山並歯科医院</title>
+  </head>
+
+  <body>
+    <!-- ヘッダー -->
+    <header>
+      <a href="#" class="logo pc-only"><img src="./image/logo-header.png" alt="山並歯科医院のロゴ"></a>
+      <a href="#" class="logo sp-only"><img src="./image/logo-header-second.png" alt="山並歯科医院のロゴ"></a>
+      <div class="right">
+        <ul class="nav">
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#">当院について</a></li>
+          <li><a href="#">診療内容</a></li>
+          <li><a href="#">アクセス</a></li>
+          <li><a href="#">よくある質問</a></li>
+        </ul>
+        <div class="tel-block">
+          <div class="tel-label">ご予約・お問い合わせ</div>
+          <a href="tel:0244221110" class="tel-number">0244-22-1110</a>
+        </div>
+        <a href="#" class="btn-reserve">Web予約</a>
+      </div>
+      <button class="hamburger" type="button" aria-controls="sp-menu" aria-expanded="false" aria-label="メニューを開く">
+        <img class="icon-open" src="./image/logo-hamburger.png" alt="ハンバーガーボタン">
+        <img class="icon-close" src="./image/logo-hamburger-close.png" alt="ハンバーガー閉じるボタン">
+      </button>
+    </header>
+
+    <main>
+      <section class="hamburger-content" id="sp-menu">
+        <div>
+          <ul class="hamburger-menu">
+            <li><a class="home" href="#">ホーム</a></li>
+            <li><a href="#">当院について</a></li>
+            <li><a href="#">診療内容</a></li>
+            <li><a href="#">よくある質問</a></li>
+          </ul>
+          <div class="tel-block-hamburger">
+            <div class="tel-label-hamburger">ご予約・お問い合わせ</div>
+            <a href="tel:0244221110" class="tel-number-hamburger">0244-22-1110</a>
+          </div>
+          <a href="#" class="btn-hamburger">Web予約</a>
+        </div>
+      </section>
+      <!-- トップページ -->
+      <section class="top-image">
+        <h1>
+          ひとりひとりに寄り添い<br>健康と笑顔を守る<br><span class="customer">お客様それぞれに合った安心の治療をお届けします。</span>
+        </h1>
+        <div class="card-base card pc-only">
+          <div class="card-label">診療時間</div>
+          <div class="card-body">
+            <p class="card-note">
+              休診とさせていただく場合がありますので、診療カレンダー・お電話にてご確認いただくことをお勧めします。
+            </p>
+            <table class="hours">
+              <thead>
+                <tr>
+                  <th scope="col">診療時間</th>
+                  <th scope="col">月</th>
+                  <th scope="col">火</th>
+                  <th scope="col">水</th>
+                  <th scope="col">木</th>
+                  <th scope="col">金</th>
+                  <th scope="col">土</th>
+                  <th scope="col">日</th>
+                  <th scope="col">祝</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="second-tb">
+                  <th scope="row">08:00〜12:00</th>
+                  <td>●</td>
+                  <td>ー</td>
+                  <td>ー</td>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>●</td>
+                </tr>
+                <tr class="third-tb">
+                  <th scope="row">15:00〜17:00</th>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>ー</td>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>●</td>
+                  <td>ー</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="card-extra">【土曜日】診療時間は18:00までです。</p>
+
+            <div class="card-footer">
+              <span>〒123-4567　◯◯県◯◯◯◯市◯◯町◯◯1234-1</span>
+              <a>マップを見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sp-only sp-card">
+        <div class="card-body">
+          <p class="card-note"> 休診とさせていただく場合がありますので、診療カレンダー・お電話にてご確認いただくことをお勧めします。</p>
+          <table class="hours">
+            <thead>
+              <tr>
+                <th scope="col">診療時間</th>
+                <th scope="col">月</th>
+                <th scope="col">火</th>
+                <th scope="col">水</th>
+                <th scope="col">木</th>
+                <th scope="col">金</th>
+                <th scope="col">土</th>
+                <th scope="col">日</th>
+                <th scope="col">祝</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="second-tb">
+                <th scope="row">08:00〜12:00</th>
+                <td>●</td>
+                <td>ー</td>
+                <td>ー</td>
+                <td>●</td>
+                <td>●</td>
+                <td>●</td>
+                <td>●</td>
+                <td>●</td>
+              </tr>
+              <tr class="third-tb">
+                <th scope="row">15:00〜17:00</th>
+                <td>●</td>
+                <td>●</td>
+                <td>●</td>
+                <td>ー</td>
+                <td>●</td>
+                <td>●</td>
+                <td>●</td>
+                <td>ー</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="card-extra">【土曜日】診療時間は18:00までです。</p>
+          <div class="card-footer">
+            <span>〒123-4567　◯◯県◯◯◯◯市◯◯町◯◯1234-1</span>
+            <a>マップを見る</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 当院について -->
+      <section class="about">
+        <a class="news" href="#">
+          <span>2023.10.10</span>
+          <span class="news-title pc-only">コロナウイルスの感染対策について</span>
+          <span class="news-title sp-only">コロナウイルスの感染対策について嗚呼嗚呼嗚呼嗚呼嗚呼嗚呼</span>
+        </a>
+        <div class="about-content">
+          <div class="section-title-center sp-about">
+            <h2 class="section-title">当院について</h2>
+            <span>ABOUT</span>
+          </div>
+          <div class="smile">
+            <h3>笑顔は歯でつくる<br>そんな笑顔のお手伝いを</h3>
+            <p>
+              治療を始める前に、最適な治療法を選び抜く。私たちの診療への考えです。私たちは追求を止めません。<br>
+              患者さんのご希望の方法に沿った最適な治療計画を私たちは考えます。<br>もちろん治療計画を勝手な判断で行うことはありません。<br>患者さんにしっかりと説明し、納得していただいて治療を行います。患者さんにしっかりと説明し、納得していただいて治療を行います。<br><br>
+              患者さんにしっかりと説明し、納得していただいて治療を行います。患者さんにしっかりと説明し、納得していただいて治療を行います。
+            </p>
+            <div class="btn-wrap">
+              <a class="btn-more" href="#">もっと見る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 診療待機室 カルーセル-->
+      <section>
+        <div class="carousel">
+          <div><img alt="待合室の写真" src="./image/waiting-room.jpg"></div>
+          <div><img alt="待合室の写真" src="./image/waiting-room.jpg"></div>
+          <div><img alt="待合室の写真" src="./image/waiting-room.jpg"></div>
+          <div><img alt="待合室の写真" src="./image/waiting-room.jpg"></div>
+          <div><img alt="待合室の写真" src="./image/waiting-room.jpg"></div>
+        </div>
+      </section>
+
+      <!-- 診療内容 -->
+      <section class="service">
+        <div class="section-title-center">
+          <h2 class="section-title">診療内容</h2>
+          <span>SERVICE</span>
+        </div>
+
+        <ul class="service-grid">
+          <li class="service-card">
+            <img alt="虫歯のロゴ" src="./image/logo-tooth-decay.png">
+            <h3 class="service-card-title">一般歯科</h3>
+            <p>
+              ここに診療内容についての説明が入ります。ここに診療内容について。
+            </p>
+          </li>
+          <li class="service-card">
+            <img alt="虫歯のロゴ" src="./image/logo-tooth-decay.png">
+            <h3 class="service-card-title">小児歯科</h3>
+            <p>
+              ここに診療内容についての説明が入ります。ここに診療内容についての説明が入ります。内容はここまで。
+            </p>
+          </li>
+          <li class="service-card">
+            <img alt="綺麗な歯のロゴ" src="./image/logo-beautiful-teeth.png">
+            <h3 class="service-card-title">予防歯科</h3>
+            <p>ここに診療内容についての説明が入ります。</p>
+          </li>
+          <li class="service-card">
+            <img alt="虫歯のロゴ" src="./image/logo-tooth-decay.png">
+            <h3 class="service-card-title">歯科矯正</h3>
+            <p>
+              ここに診療内容についての説明が入ります。ここに診療内容について。
+            </p>
+          </li>
+          <li class="service-card">
+            <img alt="インプラントのロゴ" src="./image/logo-implant.png">
+            <h3 class="service-card-title">インプラント</h3>
+            <p>
+              ここに診療内容についての説明が入ります。ここに診療内容について。
+            </p>
+          </li>
+          <li class="service-card">
+            <img alt="虫歯のロゴ" src="./image/logo-tooth-decay.png">
+            <h3 class="service-card-title">口腔外科</h3>
+            <p>
+              ここに診療内容についての説明が入ります。ここに診療内容についての説明が入ります。
+            </p>
+          </li>
+        </ul>
+        <div class="btn-wrap">
+          <a href="#" class="btn-more">もっと見る</a>
+        </div>
+      </section>
+
+      <!-- 当院の特徴 -->
+      <section class="feature">
+        <div class="section-title-center">
+          <h2 class="section-title">当院の特徴</h2>
+          <span>POINT</span>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <img src="./image/dentifrice.jpg" alt="子供に歯磨きを教える女性の写真">
+            <div class="feature-item-body">
+              <h3 class="feature-item-title">テキストテキストテキストテキストテキストテキスト</h3>
+              <p>
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキ。
+              </p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <img src="./image/disinfection.jpg" alt="消毒している女性の写真">
+            <div class=" feature-item-body">
+              <h3 class="feature-item-title">テキストテキストテキストテキストテキストテキストテキストテキ</h3>
+              <p>
+                テキストテキストテキストテキストテキストテキストテキストテキスト。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- コンタクト -->
+      <section class="contact">
+        <div>
+          <a href="#"><img src="./image/logo-header.png" alt="歯科医院のロゴ"></a>
+          <p class="tel-label">ご予約・お問い合わせ</p>
+          <div class="contact-info">
+            <a href="tel:0244221110" class="tel-number contact-tel">0244-22-1110</a>
+            <a href="#" class="btn-reserve contact-btn">Web予約</a>
+          </div>
+          <div class="card-base contact-card">
+            <div class="card-body">
+              <p class="card-note">
+                休診とさせていただく場合がありますので、診療カレンダー・お電話にてご確認いただくことをお勧めします。
+              </p>
+              <table class="hours">
+                <thead>
+                  <tr>
+                    <th scope="col">診療時間</th>
+                    <th scope="col">月</th>
+                    <th scope="col">火</th>
+                    <th scope="col">水</th>
+                    <th scope="col">木</th>
+                    <th scope="col">金</th>
+                    <th scope="col">土</th>
+                    <th scope="col">日</th>
+                    <th scope="col">祝</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="second-tb">
+                    <th scope="row">08:00〜12:00</th>
+                    <td>●</td>
+                    <td>ー</td>
+                    <td>ー</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                  </tr>
+                  <tr class="third-tb">
+                    <th scope="row">15:00〜17:00</th>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>ー</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>●</td>
+                    <td>ー</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="card-extra">【土曜日】診療時間は18:00までです。</p>
+              <div class="card-footer">
+                <span>〒123-4567　◯◯県◯◯◯◯市◯◯町◯◯1234-1</span>
+                <a class="pc-only">マップを見る</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img class="map" src="./image/map.png" alt="マップの写真">
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <ul class="nav footer-nav">
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">当院について</a></li>
+        <li><a href="#">診療内容</a></li>
+        <li><a href="#">よくある質問</a></li>
+      </ul>
+      <p class="footer-copyright">Copyright © 2023 Yamanami Dental Clinic.</p>
+    </footer>
+    <script src="./script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <!-- スライダー -->
+    <script>
+      $('.carousel').slick({
+        centerMode: true,
+        variableWidth: true,
+        dots: true,
+        arrows: false,
+        swipe: true,
+        touchMove: true,
+        responsive: [
+          {
+            breakpoint: 769,
+            settings: {
+              centerMode: false,
+              variableWidth: false,
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+
+</html>

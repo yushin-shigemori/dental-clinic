@@ -1,0 +1,1079 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+}
+
+:root {
+  --color-primary: #4b94c9;
+  --color-sub: #ffffff;
+  --color-black: #323232;
+  --color-table: #959595;
+  --font-body: "Noto Sans JP", sans-serif;
+  --color-feature: #edf4f9;
+  --title-underline-gap: 10.5px;
+}
+
+.sp-only {
+  display: none;
+}
+
+.pc-only {
+  display: block;
+}
+
+/* 文字指定 */
+h2,
+h3,
+p,
+span {
+  line-height: 1.4;
+  letter-spacing: 0%;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--color-sub);
+  line-height: 100%;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 500;
+  display: inline-block;
+  padding-bottom: var(--title-underline-gap);
+  margin-bottom: 5.5px;
+  position: relative;
+  color: var(--color-black);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+.service-card-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+/* ヘッダー部分 */
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  flex-wrap: wrap;
+  height: 90px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+.logo img {
+  max-width: 218px;
+  margin: 8px 0;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav a {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  color: var(--color-black);
+}
+
+.nav a:hover {
+  color: #4a90b8;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.tel-block {
+  margin: 12px 25px 12px 30px;
+}
+
+.tel-label {
+  font-weight: 350;
+  color: var(--color-primary);
+}
+
+.tel-number {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.btn-reserve {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 10px 34px;
+}
+
+/* トップページ部分 */
+.top-image {
+  background-image:
+    url("./image/rectangle.png"), url("./image/dentist-woman.jpg");
+  background-size: cover;
+  background-position: center 80%;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 246px;
+  padding-left: 60px;
+  border-radius: 10px;
+  aspect-ratio: 1320 / 700;
+  margin: 0 60px;
+}
+
+.customer {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 20px;
+  display: block;
+}
+
+/* 診療時間テーブル */
+.hours {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.hours th,
+.hours td {
+  border-bottom: 1px solid #b7b4b4;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: var(--color-black);
+}
+
+.hours th:first-child {
+  white-space: nowrap;
+  padding-left: 39px;
+  padding-right: 25px;
+  text-align: left;
+}
+
+.hours thead th {
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+.second-tb th,
+.second-tb td {
+  padding-top: 6px;
+  padding-bottom: 5px;
+}
+
+.third-tb th,
+.third-tb td {
+  padding-top: 5px;
+  padding-bottom: 6px;
+}
+
+.hours th:last-child,
+.hours td:last-child {
+  padding-right: 8.4px;
+}
+
+.hours th:not(:first-child),
+.hours td:not(:first-child) {
+  letter-spacing: 170%;
+}
+
+/* 診療時間カード */
+.card-base {
+  display: flex;
+  min-height: 280px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.card {
+  max-width: 710px;
+  width: 100%;
+  border-left: 1px solid #d7dee5;
+  position: absolute;
+  right: -60px;
+  bottom: 32px;
+  opacity: 90%;
+}
+
+.card-extra {
+  font-size: 14px;
+  color: var(--color-primary);
+  margin: 5px 0 15.52px 0;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 34px;
+}
+
+.card-footer span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-table);
+}
+
+.card-footer a {
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  background: var(--color-sub);
+  padding: 0.99px 12px;
+  font-size: 12px;
+  color: var(--color-table);
+  cursor: pointer;
+}
+
+.card-label {
+  writing-mode: vertical-rl;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 24px;
+  padding: 70px 35px;
+  line-height: 100%;
+  letter-spacing: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body {
+  padding: 30px 41px 0 0;
+}
+
+.card-note {
+  font-size: 14px;
+  color: var(--color-black);
+  margin: 0 0 15px;
+}
+
+/* 当院について */
+.about {
+  margin-top: 40px;
+  padding: 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  top: calc(477.55px - 11.08vw);
+  right: calc(-99.25px + 4.601vw);
+  width: calc(99.77px + 14.46vw);
+  aspect-ratio: 308 / 285;
+  background: url("./image/logo-blob.png") no-repeat center / contain;
+  z-index: -1;
+}
+
+.news {
+  border: 1px solid #b7b4b4;
+  padding: 16px 0 16px 200px;
+  border-radius: 10px;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: block;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+.news .pc-only {
+  display: inline;
+}
+
+.news span:first-child {
+  margin-right: 33px;
+}
+
+.news-title {
+  text-decoration: underline;
+}
+
+.about-content {
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 130px;
+  justify-content: center;
+  gap: 101px;
+}
+
+.smile {
+  position: relative;
+}
+
+.smile p {
+  max-width: 795px;
+  line-height: 28px;
+}
+
+.about-content span {
+  font-size: 14px;
+  font-weight: 400;
+  align-self: start;
+}
+
+.smile h3 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 35px;
+  line-height: 1.4;
+  color: var(--color-black);
+}
+
+.btn-more {
+  display: block;
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid var(--color-primary);
+  border-radius: 10px;
+  padding: 11px 60px;
+  margin-top: 45px;
+  color: var(--color-black);
+}
+
+/* 診療待機室のカルーセル */
+.carousel img {
+  max-width: 959px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 19px;
+}
+
+.slick-dotted.slick-slider {
+  margin: 0;
+}
+
+.slick-dots {
+  position: static;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 18px;
+}
+
+.slick-slide {
+  height: 400px;
+}
+
+.slick-dots li {
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.slick-dots li button {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  background: transparent;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button::before {
+  content: none;
+}
+
+.slick-dots li.slick-active button {
+  background: var(--color-primary);
+}
+
+/* 診療内容 */
+.service {
+  margin: 133px 0 130.6px 0;
+  position: relative;
+}
+
+.service::after {
+  content: "";
+  position: absolute;
+  top: calc(14.66px - 4.883vw);
+  left: calc(-51.83px - 7.512vw);
+  width: calc(99.77px + 14.46vw);
+  aspect-ratio: 308 / 309;
+  background: url("./image/logo-blob-second.png") no-repeat center / contain;
+  z-index: -1;
+}
+
+.section-title-center {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.service .section-title::after,
+.feature .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 245px));
+  gap: 52px 20px;
+  justify-content: center;
+}
+
+.service-card {
+  border-radius: 10px;
+  padding: 30px 24px;
+  text-align: center;
+  box-shadow: 5px 4px 4px 0px #0000001a;
+  background-color: var(--color-sub);
+}
+
+.service-card img {
+  max-width: 75px;
+}
+
+.service-card p {
+  text-align: left;
+}
+
+.service-card-title {
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.service .btn-more {
+  margin: 60px auto 0;
+}
+
+/* 当院の特徴 */
+.feature {
+  padding: 130px 120px;
+  background-color: var(--color-feature);
+  position: relative;
+  overflow-x: clip;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 30px;
+}
+
+.feature-item img {
+  border-radius: 10px;
+  max-width: 249px;
+  aspect-ratio: 249 / 188;
+  object-fit: cover;
+  object-position: center;
+}
+
+.feature-item-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.feature-item-body {
+  max-width: 311px;
+}
+
+.feature::after {
+  position: absolute;
+  content: "";
+  aspect-ratio: 105/ 102;
+  background: url("./image/logo-blob-third.png") no-repeat center / contain;
+  top: calc(-7.24px - 7.136vw);
+  right: calc(-33.06px + 0.282vw);
+  width: calc(67.68px + 9.953vw);
+}
+
+/* コンタクト */
+.contact {
+  display: flex;
+  gap: 29px;
+  justify-content: center;
+  padding-top: 130px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #b7b4b4;
+  margin: 0 auto;
+}
+
+.contact a img {
+  width: 218px;
+  height: 74px;
+}
+
+.contact .tel-label {
+  margin-top: 14px;
+}
+
+.contact-card {
+  max-width: 578px;
+}
+
+.contact-tel {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.contact-info {
+  display: flex;
+  gap: 49px;
+  margin-top: 5px;
+  align-items: center;
+}
+
+.contact-btn {
+  padding: 12px 83px;
+  font-size: 24px;
+}
+
+.contact .card-body {
+  padding-right: 0;
+  padding-top: 48px;
+}
+
+.map {
+  max-width: 430.8px;
+  aspect-ratio: 430.8/447;
+  align-self: flex-start;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* フッター */
+footer {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  color: var(--color-black);
+}
+
+.footer-nav {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.footer-copyright {
+  width: fit-content;
+  margin: 50px auto 0;
+  font-size: 12px;
+}
+
+/* ハンバーガーボタン */
+.hamburger {
+  display: none;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.icon-open {
+  width: 25px;
+  object-fit: cover;
+}
+
+.hamburger-content {
+  display: none;
+}
+
+.hamburger .icon-close {
+  display: none;
+}
+
+.hamburger[aria-expanded="true"] .icon-open {
+  display: none;
+}
+
+.hamburger[aria-expanded="true"] .icon-close {
+  display: block;
+}
+
+.icon-close {
+  width: 19.41px;
+  height: 16.24px;
+}
+
+/* スマホ */
+@media (max-width: 768px) {
+  .pc-only {
+    display: none;
+  }
+
+  .news .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  /* ヘッダー */
+  header {
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  header .right {
+    display: none;
+  }
+
+  .logo img {
+    max-width: 157px;
+    height: auto;
+  }
+
+  /* トップページ */
+  .top-image {
+    margin: 0 20px;
+    border-radius: 5px;
+    aspect-ratio: 335/300;
+    padding-top: 172px;
+    padding-left: 7px;
+    background-size:
+      cover,
+      100% 100%;
+    margin: 0 20px;
+  }
+
+  .customer {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .card-note {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .news {
+    display: flex;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .news span:first-child {
+    margin-right: 10px;
+  }
+
+  /* スマホだけの診療時間 * */
+  .sp-only .card-body {
+    padding: 20px 0 0 0;
+  }
+
+  .sp-only img {
+    margin: 0;
+  }
+
+  .sp-only .card-extra {
+    margin: 5px 0 10px 0;
+    font-size: 12px;
+  }
+
+  .sp-only .card-footer {
+    flex-direction: column;
+    gap: 5px;
+    align-items: start;
+  }
+
+  .sp-only .card-footer span {
+    font-size: 12px;
+  }
+
+  .sp-only .card-footer button {
+    font-size: 10px;
+  }
+
+  /* 診療時間テーブル */
+  .hours th,
+  .hours td {
+    font-size: 12px;
+    line-height: 100%;
+  }
+
+  .hours th:first-child {
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  .hours th:last-child,
+  .hours td:last-child {
+    padding-right: 10px;
+  }
+
+  .hours th:not(:first-child),
+  .hours td:not(:first-child) {
+    letter-spacing: 110%;
+  }
+
+  /* ハンバーガーメニュー */
+  .hamburger-content {
+    margin: 30px;
+  }
+
+  .hamburger-content.is-open {
+    display: block;
+  }
+
+  .hamburger-menu a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+  }
+
+  .hamburger-menu {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tel-block-hamburger {
+    margin: 30px 0;
+  }
+
+  .tel-label-hamburger {
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    font-weight: 350;
+    color: var(--color-primary);
+  }
+
+  .tel-number-hamburger {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 5px;
+    color: var(--color-primary);
+    display: inline-block;
+  }
+
+  .btn-hamburger {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0%;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    border: none;
+    color: var(--color-sub);
+    padding: 10px 62px;
+    display: inline-block;
+  }
+
+  .home {
+    color: var(--color-primary);
+  }
+
+  /* スマホだけの診療時間 */
+  .sp-card {
+    padding: 0 20px;
+  }
+
+  /* 当院について */
+  .about {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+
+  .about-content {
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .section-title-center {
+    margin-bottom: 0;
+  }
+
+  .smile h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .smile p {
+    line-height: 1.45;
+  }
+
+  .btn-more {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+    margin-top: 37px;
+    border-radius: 5px;
+  }
+
+  .sp-about {
+    text-align: left;
+  }
+
+  .section-title::after {
+    width: 50px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 3px;
+    padding-bottom: 5px;
+  }
+
+  .section-title-center span {
+    font-size: 12px;
+  }
+
+  .btn-wrap {
+    text-align: center;
+  }
+
+  /* カルーセル */
+  .carousel {
+    margin: 0 -20px;
+  }
+
+  .carousel .slick-slide {
+    margin: 0;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 375 / 156;
+    margin: 0;
+    border-radius: 5px;
+  }
+
+  .slick-slide {
+    height: 156px;
+  }
+
+  .slick-dots {
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .slick-dots li button {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* サービス内容 */
+  .service {
+    padding: 0 20px;
+    margin: 80px 0;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 160px);
+    gap: 15px 20px;
+    margin-top: 20px;
+  }
+
+  .service-card {
+    padding-top: 20px;
+    padding-right: 17px;
+    padding-left: 17px;
+    width: 160px;
+    height: 245px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  .service-card-title {
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+
+  .service-card img {
+    max-width: 40px;
+  }
+
+  .service .btn-more {
+    margin-top: 40px;
+  }
+
+  /* 当院の特徴 */
+  .feature {
+    padding: 80px 20px 60px;
+  }
+
+  .feature-grid {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .feature-item-body {
+    max-width: 335px;
+  }
+
+  .feature-item-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .feature-item-body p {
+    font-size: 14px;
+  }
+
+  .feature-item img {
+    margin: 0;
+    max-width: 335px;
+    aspect-ratio: 335/253.14;
+    border-radius: 5px;
+  }
+
+  .feature-item img:first-child {
+    margin-top: 20px;
+  }
+
+  /* コンタクト */
+  .contact-info {
+    gap: 7px;
+    margin: 0;
+  }
+
+  .contact .tel-label {
+    font-size: 12px;
+  }
+
+  .contact-btn {
+    max-width: 155px;
+    padding: 8px 36px;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+  .contact-tel {
+    font-size: 26px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .contact {
+    padding: 80px 20px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .contact .card-body {
+    padding: 0;
+    margin-top: 40px;
+  }
+
+  .contact .card-body span {
+    font-size: 12px;
+  }
+
+  .contact .card-body .card-extra {
+    margin-bottom: 40px;
+  }
+
+  .contact-card {
+    min-height: auto;
+  }
+
+  .map {
+    max-width: 335px;
+    aspect-ratio: 335/316;
+    margin: 0 auto;
+  }
+
+  .contact-card .hours th:first-child {
+    padding-left: 0;
+  }
+
+  /* フッター */
+  .nav a {
+    font-size: 14px;
+  }
+
+  footer {
+    padding-top: 41px;
+  }
+
+  .nav {
+    gap: 23px;
+  }
+
+  .footer-copyright {
+    font-size: 6px;
+    margin-top: 40px;
+  }
+}
